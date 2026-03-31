@@ -69,6 +69,8 @@ const Work = () => {
   useGSAP(() => {
     const container = document.querySelector(".work-flex");
 
+    if (!container) return; // ✅ FIX: null safety
+
     const totalWidth = container.scrollWidth;
     const viewportWidth = window.innerWidth;
 
