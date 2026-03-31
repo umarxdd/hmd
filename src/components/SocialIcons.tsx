@@ -1,8 +1,9 @@
 import {
-  FaGithub,
+  // FaGithub,
   FaInstagram,
   FaLinkedinIn,
-  FaXTwitter,
+  FaWhatsapp,
+  // FaXTwitter,
 } from "react-icons/fa6";
 import "./styles/SocialIcons.css";
 import { TbNotes } from "react-icons/tb";
@@ -60,28 +61,34 @@ const SocialIcons = () => {
     <div className="icons-section">
       <div className="social-icons" data-cursor="icons" id="social">
         <span>
-          <a href="https://github.com" target="_blank">
-            <FaGithub />
+          <a href="https://wa.me/+923465121033" target="_blank">
+            <FaWhatsapp />
           </a>
         </span>
         <span>
-          <a href="https://www.linkedin.com" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/hammad-abbasi-b49033294?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+            target="_blank"
+          >
             <FaLinkedinIn />
           </a>
         </span>
-        <span>
+        {/* <span>
           <a href="https://x.com" target="_blank">
             <FaXTwitter />
           </a>
-        </span>
+        </span> */}
         <span>
-          <a href="https://www.instagram.com" target="_blank">
+          <a
+            href="https://www.instagram.com/filmatheist_1?igsh=dTI3YXpwaXRjZWN5"
+            target="_blank"
+          >
             <FaInstagram />
           </a>
         </span>
       </div>
-      <a className="resume-button" href="#">
-        <HoverLinks text="RESUME" />
+      <a className="resume-button" href="https://vimeo.com/user229349287">
+        <HoverLinks text="PORTFOLIO" />
         <span>
           <TbNotes />
         </span>

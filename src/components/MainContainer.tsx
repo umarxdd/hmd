@@ -7,6 +7,7 @@ import Landing from "./Landing";
 import Navbar from "./Navbar";
 import SocialIcons from "./SocialIcons";
 import WhatIDo from "./WhatIDo";
+import VideoSection from "./VideoSection";
 import Work from "./Work";
 import setSplitText from "./utils/splitText";
 
@@ -14,7 +15,7 @@ const TechStack = lazy(() => import("./TechStack"));
 
 const MainContainer = ({ children }: PropsWithChildren) => {
   const [isDesktopView, setIsDesktopView] = useState<boolean>(
-    window.innerWidth > 1024
+    window.innerWidth > 1024,
   );
 
   useEffect(() => {
@@ -41,6 +42,7 @@ const MainContainer = ({ children }: PropsWithChildren) => {
             <Landing>{!isDesktopView && children}</Landing>
             <About />
             <WhatIDo />
+            <VideoSection />
             <Career />
             <Work />
             {isDesktopView && (

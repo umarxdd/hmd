@@ -1,43 +1,57 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MdArrowOutward } from "react-icons/md";
 
 interface Props {
-  image: string;
+  video: string; // This is now the Vimeo ID
   alt?: string;
-  video?: string;
   link?: string;
 }
 
 const WorkImage = (props: Props) => {
-  const [isVideo, setIsVideo] = useState(false);
-  const [video, setVideo] = useState("");
-  const handleMouseEnter = async () => {
-    if (props.video) {
-      setIsVideo(true);
-      const response = await fetch(`src/assets/${props.video}`);
-      const blob = await response.blob();
-      const blobUrl = URL.createObjectURL(blob);
-      setVideo(blobUrl);
-    }
-  };
+  const [isHovered, setIsHovered] = useState(false);
+  const [thumbnail, setThumbnail] = useState("");
+
+  useEffect(() => {
+    // Automatically get the Vimeo "First Frame" thumbnail
+    fetch(`https://vimeo.com/api/v2/video/${props.video}.json`)
+      .then((res) => res.json())
+      .then((data) => setThumbnail(data[0].thumbnail_large));
+  }, [props.video]);
 
   return (
-    <div className="work-image">
+    <div
+      className="work-image"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <a
         className="work-image-in"
         href={props.link}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={() => setIsVideo(false)}
         target="_blank"
-        data-cursor={"disable"}
+        data-cursor="disable"
       >
         {props.link && (
           <div className="work-link">
             <MdArrowOutward />
           </div>
         )}
-        <img src={props.image} alt={props.alt} />
-        {isVideo && <video src={video} autoPlay muted playsInline loop></video>}
+
+        {/* Show Thumbnail by default */}
+        <img
+          src={thumbnail}
+          alt={props.alt}
+          style={{ opacity: isHovered ? 0 : 1 }}
+        />
+
+        {/* Show Video on hover */}
+        {isHovered && (
+          <iframe
+            src={`https://player.vimeo.com/video/${props.video}?autoplay=1&muted=1&loop=1&background=1`}
+            frameBorder="0"
+            allow="autoplay; fullscreen"
+            className="vimeo-hover-player"
+          ></iframe>
+        )}
       </a>
     </div>
   );

@@ -15,43 +15,46 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>Senior Video Editor & Videographer</h4>
+                <h5>Vostro World</h5>
               </div>
-              <h3>20XX</h3>
+              <h3>2024 - Present</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Worked on editing videos and shooting content for different
+              projects. Managed camera work, lighting, and sound to create
+              high-quality videos. Also helped in planning ideas and making sure
+              the final output looks professional and engaging.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>video Editor</h4>
+                <h5>Markosol Ltd</h5>
               </div>
-              <h3>20XX</h3>
+              <h3>July 2024- Oct 2024</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Edited videos for social media and client projects. Cut clips,
+              added effects, music, and transitions to improve the final video.
+              Followed given instructions and delivered work on time while
+              keeping good quality.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>Graphic Designer</h4>
+                <h5>Barq Al Saab Calligraphers</h5>
               </div>
-              <h3>NOW</h3>
+              <h3>Oct 2023 - May 2024</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Created designs for posts, banners, and branding materials. Worked
+              with different tools to make creative and clean designs. Helped
+              the team by turning ideas into visuals that attract people and
+              match the brand style.
             </p>
           </div>
         </div>
