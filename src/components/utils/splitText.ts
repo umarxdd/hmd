@@ -107,7 +107,7 @@ export default function setSplitText() {
     para.classList.add("visible");
 
     para.anim?.progress(1).kill();
-    para.split?.revert();
+    (para ?? "").split?.revert();
 
     para.split = new SplitText(para, {
       type: "lines,words",
@@ -134,7 +134,7 @@ export default function setSplitText() {
 
   titles.forEach((title) => {
     title.anim?.progress(1).kill();
-    title.split?.revert();
+    (title ?? "").split?.revert();
 
     title.split = new SplitText(title, {
       type: "chars,lines",
