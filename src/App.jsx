@@ -1,5 +1,6 @@
 import React from "react";
 import PortfolioSection from "./pages/portfolio";
+import CashcowSection from "./pages/cashcow";
 
 export default function Portfolio() {
   return (
@@ -42,7 +43,7 @@ export default function Portfolio() {
           </button>
         </div>
         <div className="flex justify-center">
-          <img src="images/hamad2.jpg" alt="editor" className="rounded-2xl" />
+          <img src="images/hammad.png" alt="editor" className="rounded-2xl" />
         </div>
       </section>
 
@@ -92,6 +93,8 @@ export default function Portfolio() {
 
       {/* Portfolio */}
       <PortfolioSection />
+
+      <CashcowSection />
 
       {/* Contact */}
       <section
@@ -152,3 +155,6 @@ export default function Portfolio() {
     </div>
   );
 }
+// https://vimeo.com/1187670526
+//  https://vimeo.com/1187672378
+//  https://vimeo.com/1187673354
